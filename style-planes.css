@@ -1,0 +1,154 @@
+:root {
+    --primary: #002366;
+    --accent: #d4af37;
+    --dark: #0a0a0a;
+    --light: #f8f9fa;
+    --white: #ffffff;
+    --text: #333;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: 'Montserrat', sans-serif; 
+    background: #f4f7f6; 
+    color: var(--text); 
+    line-height: 1.6;
+}
+
+.container { max-width: 1200px; margin: auto; padding: 0 20px; }
+
+/* Header */
+.pricing-header { 
+    background: var(--primary); 
+    color: white; 
+    padding: 100px 0 120px; 
+    text-align: center; 
+}
+
+.back-link { 
+    color: white; 
+    text-decoration: none; 
+    font-size: 0.9rem; 
+    display: inline-block; 
+    margin-bottom: 20px; 
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.back-link:hover { opacity: 1; transform: translateX(-5px); }
+
+.pricing-header h1 { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 3rem; 
+}
+
+.highlight { color: var(--accent); }
+
+/* Tabla de Precios */
+.pricing-table { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; 
+    margin-top: -80px; 
+}
+
+.price-card { 
+    background: white; 
+    padding: 40px; 
+    border-radius: 15px; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+    text-align: center; 
+    position: relative; 
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-card:hover { transform: translateY(-10px); }
+
+.featured { 
+    border: 2px solid var(--accent); 
+    transform: scale(1.05); 
+    z-index: 10; 
+}
+
+.ribbon { 
+    position: absolute; 
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background: var(--accent); 
+    color: black; 
+    padding: 5px 25px; 
+    font-size: 0.7rem; 
+    font-weight: 700; 
+    border-radius: 0 0 10px 10px; 
+}
+
+.price { 
+    font-size: 2.8rem; 
+    font-weight: 700; 
+    color: var(--primary); 
+    margin: 20px 0 10px; 
+}
+
+.price span { font-size: 1rem; color: #777; font-weight: 400; }
+
+.description { font-size: 0.9rem; color: #666; margin-bottom: 20px; }
+
+ul { list-style: none; padding: 0; margin: 30px 0; text-align: left; flex-grow: 1; }
+ul li { padding: 12px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.9rem; display: flex; align-items: center; }
+ul li i { margin-right: 12px; color: #27ae60; }
+ul li.disabled { color: #ccc; text-decoration: line-through; }
+
+.btn-price { 
+    display: block; 
+    background: var(--primary); 
+    color: white; 
+    padding: 18px; 
+    text-decoration: none; 
+    border-radius: 8px; 
+    font-weight: 700; 
+    transition: 0.3s;
+}
+
+.featured-btn { background: var(--accent); color: black; }
+.btn-price:hover { opacity: 0.9; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+
+/* Métodos de Pago */
+.payment-methods { margin-top: 80px; }
+.payment-box { 
+    background: white; 
+    padding: 40px; 
+    border-radius: 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+}
+
+.payment-info h4 { color: var(--primary); font-size: 1.5rem; }
+.payment-icons { display: flex; gap: 40px; }
+.method { text-align: center; }
+.method i { font-size: 2rem; color: var(--accent); display: block; margin-bottom: 5px; }
+.method span { font-size: 0.75rem; font-weight: 600; color: var(--primary); }
+
+/* FAQ */
+.section-title { text-align: center; margin-bottom: 50px; font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--primary); }
+.faq { padding: 100px 0; }
+.faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+.faq-item h5 { font-size: 1.2rem; color: var(--primary); margin-bottom: 15px; border-left: 4px solid var(--accent); padding-left: 15px; }
+.faq-item p { color: #555; font-size: 0.95rem; }
+.faq-item p strong { color: var(--primary); border-bottom: 1px solid var(--accent); }
+
+footer { background: var(--dark); color: white; padding: 40px 0; text-align: center; font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+    .pricing-header h1 { font-size: 2.2rem; }
+    .payment-box { text-align: center; justify-content: center; }
+    .payment-icons { justify-content: center; width: 100%; }
+    .featured { transform: scale(1); }
+}
